@@ -107,9 +107,9 @@ export default function AboutMe() {
         id="toExplain"
       >
         <div className="w-[600px]">
-          <div className="flex justify-start ml-7 mt-10">
+          <div className="flex justify-center md:justify-start ml-7 mt-10">
             <div
-              className="w-[400px] sm:w-[550px] text-xl leading-10 tracking-wide translate-y-7 opacity-0 transition-all"
+              className="w-full mr-2 md:w-[650px] text-xl leading-10 tracking-wide translate-y-7 opacity-0 transition-all"
               id="goodDeveloper"
             >
               {" "}
@@ -119,10 +119,10 @@ export default function AboutMe() {
               already 22 years and a University of Distance Education student.{" "}
             </div>
           </div>
-          <div className="w-full ml-7 mt-5 flex justify-start text-xl leading-10 tracking-wide">
+          <div className="ml-7 mt-5 flex justify-center md:justify-start text-xl leading-10 tracking-wide">
             {" "}
             <div
-              className="w-[400px] sm:w-[550px] text-xl leading-10 tracking-wide translate-y-7 opacity-0 transition-all"
+              className="w-full mr-2 md:w-[650px] text-xl leading-10 tracking-wide translate-y-7 opacity-0 transition-all"
               id="goodDeveloper2"
             >
               <span className={`text-7xl font-light ${Grey.className}`}>L</span>
@@ -132,7 +132,7 @@ export default function AboutMe() {
           </div>
         </div>
         <div className="w-[50%] mt-10 flex justify-center mb-16">
-          <div className="h-96 w-80 border border-slate-400">
+          <div className="h-96 w-96 bg-blue-400 border border-slate-400">
             <Image src={""} alt="photo goes here" />
           </div>
         </div>
