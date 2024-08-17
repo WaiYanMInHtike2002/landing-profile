@@ -39,8 +39,6 @@ export default function Layout({ children }: Props) {
 
   return (
     <div className="relative">
-      <Loading />
-
       {open ? (
         <div className="min-h-screen w-full bg-customGray text-black relative">
           <div>
@@ -64,6 +62,7 @@ export default function Layout({ children }: Props) {
         </div>
       ) : (
         <div className="bg-customGray text-black min-h-screen">
+          <Loading />
           <div className="transition-all z-10" id="sticky">
             <TopNavBar open={open} setOpen={setOpen} />
           </div>
