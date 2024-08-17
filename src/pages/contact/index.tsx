@@ -14,7 +14,7 @@ const inputArr = [
   },
   {
     id: "02.",
-    header: "What's is your email?",
+    header: `What's is your email?`,
     type: "email",
     placeholder: "example@gmail.com",
   },
