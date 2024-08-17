@@ -41,7 +41,7 @@ export default function Home() {
               <FontAwesomeIcon icon={faArrowDown} />
             </div>
           </div>
-          <div className="absolute left-0 bottom-0 pl-2.5 w-full ">
+          <div className="absolute h-20 mt-20 left-5 bottom-50">
             <div className="text-black text-3xl flex items-center">
               <div className="origin-center rotate-12 ">
                 <FontAwesomeIcon icon={faGlobe} />

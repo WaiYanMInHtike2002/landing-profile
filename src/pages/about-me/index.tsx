@@ -21,6 +21,7 @@ export default function AboutMe() {
     gsap.to("#firstItem", {
       y: "-137px",
       stagger: 0.17,
+      delay: 1,
     });
     gsap.to("#secondItem", {
       y: 0,

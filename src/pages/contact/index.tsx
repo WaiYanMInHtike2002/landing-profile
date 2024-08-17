@@ -4,7 +4,11 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useEffect } from "react";
-
+import { Playfair_Display, Grey_Qo } from "next/font/google";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import Link from "next/link";
+const playFair = Playfair_Display({ weight: "400", subsets: ["cyrillic"] });
 const inputArr = [
   {
     id: "01.",
@@ -19,14 +23,78 @@ const inputArr = [
     placeholder: "example@gmail.com",
   },
 ];
-
+const arr = [
+  { name: "WORK .", href: "#toWork" },
+  { name: "EMAIL .", href: "#toWork" },
+  { name: "CALL .", href: "#toWork" },
+];
 export default function Contact() {
+  useGSAP(() => {
+    gsap.to("#firstItem", {
+      y: "-137px",
+      stagger: 0.17,
+      delay: 1,
+    });
+    gsap.to("#secondItem", {
+      y: 0,
+      opacity: 1,
+      delay: 1.5,
+      stagger: 0.1,
+    });
+    gsap.to("#ambition", {
+      y: 0,
+      opacity: 1,
+      delay: 2.3,
+      stagger: 0.2,
+    });
+  });
   useEffect(() => {
     acitvate();
   }, []);
   return (
     <Layout>
-      <div className="min-h-[calc(100vh-80px)] select-none text-gray-700">
+      <div className={`${playFair.className} w-full h-[calc(100vh-80px)]`}>
+        <div className="h-full flex justify-center items-center">
+          <div>
+            <div
+              className="flex text-7xl text-gray-700 font-extralight
+             md:text-9xl overflow-hidden"
+            >
+              {["C", "O", "N", "T", "A", "C", "T"].map((item) => {
+                return (
+                  <div className="" key={item}>
+                    <div
+                      className="absolute translate-y-[102px] opacity-0"
+                      id="secondItem"
+                    >
+                      {item}
+                    </div>
+                    <div className="" id="firstItem">
+                      {item}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex justify-center">
+              <div className="flex">
+                {arr.map((item) => {
+                  return (
+                    <div
+                      key={item.name}
+                      className="p-3 text-[17px] text-slate-700 translate-y-5 opacity-0"
+                      id="ambition"
+                    >
+                      <Link href={item.href}>{item.name}</Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-screen select-none text-gray-700" id="toWork">
         <div>
           <div className="flex  justify-center mt-14">
             <div className="flex flex-col lg:flex-row items-center w-full md:w-5/6">
