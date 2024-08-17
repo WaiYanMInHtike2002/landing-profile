@@ -132,7 +132,7 @@ export default function AboutMe() {
           </div>
         </div>
         <div className="w-[50%] mt-10 flex justify-center mb-16">
-          <div className="h-96 w-96 bg-blue-400 border border-slate-400">
+          <div className="h-96 w-96 border border-slate-400">
             <Image src={""} alt="photo goes here" />
           </div>
         </div>

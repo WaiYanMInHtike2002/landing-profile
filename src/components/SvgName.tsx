@@ -20,7 +20,7 @@ export default function SvgName() {
 
   return (
     <div className={ubuntu.className}>
-      <div className=" text-[87px] sm:text-8xl md:text-9xl flex flex-col justify-center items-center w-full h-full overflow-hidden font-medium opacity-70">
+      <div className=" text-[77px]  sm:text-8xl md:text-9xl flex flex-col justify-center items-center w-full h-full overflow-hidden font-medium opacity-70">
         <div className="w-full h-full">
           <div className="-translate-x-12 opacity-0" id="intro">
             <svg width="100%" height="100%">
