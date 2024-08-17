@@ -6,6 +6,7 @@ import Contacts from "./Contacts";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap, { Linear } from "gsap";
+import Link from "next/link";
 const arr = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About me", link: "/about-me" },
@@ -47,9 +48,9 @@ export default function Layout({ children }: Props) {
                   key={item.id}
                   className="relative w-full h-1/4 mb-3 flex items-center text-7xl"
                 >
-                  <a href={item.link} className="p-4 w-full " id="copy">
+                  <Link href={item.link} className="p-4 w-full " id="copy">
                     {item.name}
-                  </a>
+                  </Link>
                   <div className="absolute w-full h-[2px] top-1/2 bg-slate-500"></div>
                 </div>
               );

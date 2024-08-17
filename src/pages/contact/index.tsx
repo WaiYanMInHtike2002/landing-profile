@@ -20,7 +20,7 @@ const inputArr = [
   },
 ];
 
-export default function contact() {
+export default function Contact() {
   useEffect(() => {
     acitvate();
   }, []);
@@ -41,7 +41,7 @@ export default function contact() {
                 </div>
               </div>
               <div className="text-7xl mt-10 sm:mt-0 sm:text-9xl ml-10 tracking-wider">
-                <div className="">Let's work</div> <div>together</div>
+                <div className="">Let&apos;s work</div> <div>together</div>
               </div>
             </div>
           </div>

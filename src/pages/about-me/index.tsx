@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react";
 import gsap, { Linear } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Playfair_Display, Grey_Qo } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
 const playFair = Playfair_Display({ weight: "400", subsets: ["cyrillic"] });
 const Grey = Grey_Qo({ weight: "400", subsets: ["latin"] });
 const arr = [
@@ -87,10 +89,11 @@ export default function AboutMe() {
                 {arr.map((item) => {
                   return (
                     <div
+                      key={item.name}
                       className="p-3 text-xl text-slate-700 translate-y-5 opacity-0"
                       id="ambition"
                     >
-                      <a href={item.href}>{item.name}</a>
+                      <Link href={item.href}>{item.name}</Link>
                     </div>
                   );
                 })}
@@ -112,7 +115,7 @@ export default function AboutMe() {
               {" "}
               <span className={`text-7xl font-light ${Grey.className}`}>M</span>
               y ambition is to become a good developer both in frontend and
-              backend. Especially love in designing the frontend. Now I'm
+              backend. Especially love in designing the frontend. Now I&apos;m
               already 22 years and a University of Distance Education student.{" "}
             </div>
           </div>
@@ -130,18 +133,18 @@ export default function AboutMe() {
         </div>
         <div className="w-[50%] mt-10 flex justify-center mb-16">
           <div className="h-96 w-80 border border-slate-400">
-            <img src="" alt="photo goes here" className="h-full w-full" />
+            <Image src={""} alt="photo goes here" />
           </div>
         </div>
         <div className="group absolute mt-3 bottom-1 right-4 xl:bottom-10 xl:right-7 text-[#2F2FD6]">
-          <a href="/contact">
+          <Link href="/contact">
             <span className={`text-7xl font-light ${Grey.className}`}>w</span>
             anna talk about work?{" "}
             <FontAwesomeIcon
               icon={faArrowRightLong}
               className="transition-all group-hover:translate-x-3"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </Layout>

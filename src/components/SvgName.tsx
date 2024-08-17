@@ -32,7 +32,7 @@ export default function SvgName() {
                 strokeWidth="3"
                 textAnchor="middle"
               >
-                Hi,I'm....
+                Hi,I&apos;m....
               </text>
             </svg>
           </div>

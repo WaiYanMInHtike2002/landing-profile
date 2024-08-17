@@ -6,6 +6,8 @@ import gsap from "gsap";
 const Grey = Grey_Qo({ weight: "400", subsets: ["latin"] });
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 const arr = [
   { id: 1, link: "", imgSrc: "" },
   { id: 2, link: "", imgSrc: "" },
@@ -59,13 +61,9 @@ const Works = () => {
                 className="h-80 m-3 bg-slate-400 w-[420px]"
                 id="photoSlide"
               >
-                <a href={item.link}>
-                  <img
-                    src={item.imgSrc}
-                    alt="photo goes here"
-                    className="h-full w-full"
-                  />
-                </a>
+                <Link href={item.link}>
+                  <Image src={item.imgSrc} alt="photo goes here" />
+                </Link>
               </div>
             );
           })}

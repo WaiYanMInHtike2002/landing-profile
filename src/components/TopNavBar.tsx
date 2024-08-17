@@ -29,7 +29,7 @@ export default function TopNavBar({ open, setOpen }: Props) {
     <div className="h-20 w-full flex justify-between items-center text-gray-600 ">
       <div className="ml-4 text-2xl " id="magnet">
         <div className="tracking-wider" id="magnetText">
-          <a href="/" id="magnetText">
+          <Link href="/" id="magnetText">
             <span
               className={`text-7xl text-black opacity-100 ${Grey.className}`}
             >
@@ -39,7 +39,7 @@ export default function TopNavBar({ open, setOpen }: Props) {
               a
             </span>
             iyan's
-          </a>
+          </Link>
         </div>
       </div>
       <div className="mr-4 hidden md:flex">
