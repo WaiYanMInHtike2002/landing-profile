@@ -70,7 +70,7 @@ export default function AboutMe() {
             >
               {["A", "B", "O", "U", "T", "M", "3"].map((item) => {
                 return (
-                  <div className="">
+                  <div className="" key={item}>
                     <div
                       className="absolute translate-y-[102px] opacity-0"
                       id="secondItem"

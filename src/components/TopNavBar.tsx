@@ -38,7 +38,7 @@ export default function TopNavBar({ open, setOpen }: Props) {
             <span className="inline-block" id="aName">
               a
             </span>
-            iyan's
+            iyan&apos;s
           </Link>
         </div>
       </div>
