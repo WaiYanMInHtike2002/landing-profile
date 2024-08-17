@@ -7,8 +7,7 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap, { Linear, Power2 } from "gsap";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import Loading from "./Loading";
+import PageLoading from "./PageLoading";
 const arr = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About me", link: "/about-me" },
@@ -62,7 +61,7 @@ export default function Layout({ children }: Props) {
         </div>
       ) : (
         <div className="bg-customGray text-black min-h-screen">
-          <Loading />
+          <PageLoading />
           <div className="transition-all z-10" id="sticky">
             <TopNavBar open={open} setOpen={setOpen} />
           </div>
