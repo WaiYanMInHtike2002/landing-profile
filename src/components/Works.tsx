@@ -40,9 +40,9 @@ const Works = () => {
     });
   }, []);
   return (
-    <div className="text-gray-900  relative mt-10">
+    <div className="text-gray-900 relative mt-10">
       <div
-        className="group mb-5 md:mb-0 opacity-0 text-2xl translate-y-5 p-3 h-20 flex items-center"
+        className="group mb-5 md:mb-0 opacity-0 text-3xl translate-y-5 p-3 h-20 flex items-center"
         id="work"
       >
         <span className={`text-7xl font-light ${Grey.className}`}>M</span>y
@@ -52,13 +52,13 @@ const Works = () => {
           className="transition-all rotate-45 translate-y-[1px] text-xl ml-2 font-thin group-hover:translate-x-3 text-gray-700"
         />
       </div>
-      <div className="md:h-[calc(100vh-80px)] w-full flex justify-center items-center">
-        <div className="sm:h-auto xl:h-96 w-full border-y-2 border-slate-400 flex flex-wrap justify-around items-center">
+      <div className="h-auto mt-10 w-full flex justify-center items-center">
+        <div className="h-auto xl:h-96 w-full border-y-2 border-slate-400 flex flex-wrap justify-around items-center">
           {arr.map((item) => {
             return (
               <div
                 key={item.id}
-                className="h-80 m-3 bg-slate-400 w-[420px]"
+                className="h-64 w-[370px] md:h-80 m-3 bg-slate-400 md:w-[420px]"
                 id="photoSlide"
               >
                 <Link href={item.link}>

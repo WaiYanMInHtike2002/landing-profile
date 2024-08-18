@@ -39,7 +39,7 @@ const PageLoading = () => {
       <div className="h-full w-[10%] bg-black" id="loading"></div>
 
       <div
-        className="absolute h-40 left-[25%] md:left-[40%] top-[45%] text-gray-300 text-5xl sm:text-7xl md:text-8xl uppercase font-semibold"
+        className="absolute h-40 left-[10%] md:left-[40%] top-[45%] text-gray-300 text-5xl sm:text-7xl md:text-8xl uppercase font-semibold"
         id="name"
       >
         {name === "" ? "HOME" : name}

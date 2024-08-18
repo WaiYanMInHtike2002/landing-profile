@@ -9,12 +9,14 @@ export default function SvgName() {
       x: 0,
       duration: 0.5,
       ease: Power4.easeOut,
+      delay: 1,
     });
     gsap.to("#intro2", {
       opacity: 1,
       x: 0,
       duration: 1,
       ease: Power4.easeOut,
+      delay: 1,
     });
   }, []);
 

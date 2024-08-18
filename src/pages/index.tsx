@@ -27,43 +27,43 @@ export default function Home() {
   const [open, setOpen] = useState<boolean>(false);
   return (
     <Layout>
-      <main className="bg-customGray text-black min-h-[calc(100vh-80px)]">
-        <section className="h-screen">
-          <div className={ubuntu.className}>
-            <div className="mt-32 md:mt-16">
-              <SvgName />
+      <section className="">
+        <div className="h-[calc(100vh-80px)] w-full relative">
+          <div className="pt-14">
+            <SvgName />
+          </div>
+          <div className="absolute bottom-1 mb-5 sm:mb-0 left-2">
+            <img
+              src="/location.png"
+              alt=""
+              height={30}
+              width={30}
+              className="inline-block animate-spin "
+            />{" "}
+            Maubin, Ayeyarwaddy, Myanmar.
+          </div>
+          <div className="fixed right-2 bottom-3">
+            <div className="rotate-90 -translate-y-3">scroll</div>
+            <div>
+              <Image
+                src={"/downArrow.png"}
+                alt="arrow photo"
+                width={30}
+                height={30}
+                className="translate-x-1"
+              />
             </div>
           </div>
-
-          <div className="fixed bottom-2 right-2 flex flex-col">
-            <div className="-rotate-90  -top-14 right-px mr-1 mb-7">scroll</div>
-            <div className="text-black text-2xl animate-bounce opacity-75  rounded-full w-8 h-8 flex justify-center items-center ml-1">
-              <FontAwesomeIcon icon={faArrowDown} />
-            </div>
+        </div>
+        <div className="h-[80vh] w-full flex items-center">
+          <div className="">
+            <State />
           </div>
-          <div className="absolute h-20 mt-20 left-5 bottom-50">
-            <div className="text-black text-3xl flex items-center">
-              <div className="origin-center rotate-12 ">
-                <FontAwesomeIcon icon={faGlobe} />
-              </div>
-
-              <div className="p-2 mb-2 text-gray-600" id="maubin">
-                <span className="text-lg">Maubin,Ayeyarwaddy,Myanmar.</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="min-h-screen w-full text-black -mt-20">
-          <State />
-          <div
-            className="h-auto md:h-[100vh] transition-transform w-full bg-customGray text-gray-300 rounded-t-full"
-            id="skillCircle"
-          >
-            <Works />
-          </div>
-        </section>
-      </main>
+        </div>
+        <div className="min-h-screen">
+          <Works />
+        </div>
+      </section>
     </Layout>
   );
 }
