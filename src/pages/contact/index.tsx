@@ -132,7 +132,7 @@ export default function Contact() {
               <div className="flex ml-5 sm:ml-0 text-4xl">
                 {" "}
                 <div className="mr-10">01.</div>
-                <div>What's your name?</div>
+                <div>What&apos;s your name?</div>
               </div>
               <div className="outline-0 mt-5 text-2xl">
                 <input
@@ -151,7 +151,7 @@ export default function Contact() {
               <div className="flex ml-5 sm:ml-0 text-4xl">
                 {" "}
                 <div className="mr-10">02.</div>
-                <div>What's your gmail?</div>
+                <div>What&apos;s your gmail?</div>
               </div>
               <div className="outline-0 mt-5 text-2xl">
                 <input
