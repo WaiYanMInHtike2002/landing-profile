@@ -3,6 +3,8 @@ import type { AppProps } from "next/app";
 import { Poppins } from "next/font/google";
 import Lenis from "lenis";
 import { useEffect } from "react";
+import { Provider } from "react-redux";
+import { store } from "@/store/store";
 const poppin = Poppins({
   subsets: ["latin"],
   weight: "300",
@@ -23,7 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <div className={poppin.className}>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </div>
   );
 }

@@ -14,16 +14,6 @@ import Works from "@/components/Works";
 const ubuntu = Ubuntu({ weight: "700", subsets: ["cyrillic"] });
 
 export default function Home() {
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from("#maubin", {
-      opacity: 0,
-      x: 40,
-      duration: 1,
-      ease: Elastic.easeOut,
-    });
-  }, []);
-
   const [open, setOpen] = useState<boolean>(false);
   return (
     <Layout>

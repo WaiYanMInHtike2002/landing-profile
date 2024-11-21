@@ -8,6 +8,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap, { Linear, Power2 } from "gsap";
 import Link from "next/link";
 import PageLoading from "./PageLoading";
+import { Toaster } from "react-hot-toast";
 const arr = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About me", link: "/about-me" },
@@ -38,6 +39,7 @@ export default function Layout({ children }: Props) {
 
   return (
     <div className="relative">
+      <Toaster />
       {open ? (
         <div className="min-h-screen w-full bg-customGray text-black relative">
           <div>

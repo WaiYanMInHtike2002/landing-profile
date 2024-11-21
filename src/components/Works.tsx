@@ -6,11 +6,9 @@ import gsap from "gsap";
 const Grey = Grey_Qo({ weight: "400", subsets: ["latin"] });
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 const arr = [
-  { id: 1, link: "", imgSrc: "" },
-  { id: 2, link: "", imgSrc: "" },
+  { id: 1, link: "", imgSrc: "/theatre.mp4" },
+  { id: 2, link: "", imgSrc: "/ani-shop.mp4" },
   { id: 3, link: "", imgSrc: "" },
 ];
 const Works = () => {
@@ -58,12 +56,22 @@ const Works = () => {
             return (
               <div
                 key={item.id}
-                className="h-64 w-[370px] md:h-80 m-3 bg-slate-400 md:w-[420px]"
+                className="h-64 w-[370px] md:h-[320px] m-3  md:w-[420px]"
                 id="photoSlide"
               >
-                <Link href={item.link}>
-                  <Image src={item.imgSrc} alt="photo goes here" />
-                </Link>
+                {/* <img
+                  src={item.imgSrc}
+                  alt="photo goes here"
+                  className="w-full h-full shadow-md hover:scale-110"
+                /> */}
+                <video
+                  src={item.imgSrc}
+                  className="h-full w-full object-fill"
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                ></video>
               </div>
             );
           })}
