@@ -59,19 +59,11 @@ const Works = () => {
                 className="h-64 w-[370px] md:h-[320px] m-3  md:w-[420px]"
                 id="photoSlide"
               >
-                {/* <img
+                <img
                   src={item.imgSrc}
-                  alt="photo goes here"
+                  alt="can't provide videos here coz the large file sizes"
                   className="w-full h-full shadow-md hover:scale-110"
-                /> */}
-                <video
-                  src={item.imgSrc}
-                  className="h-full w-full object-fill"
-                  autoPlay
-                  muted
-                  playsInline
-                  loop
-                ></video>
+                />
               </div>
             );
           })}
